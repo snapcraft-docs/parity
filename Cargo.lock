@@ -424,6 +424,9 @@ dependencies = [
 name = "error-chain"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "backtrace 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "eth-secp256k1"
@@ -2473,6 +2476,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "getopts 0.2.15 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
+
+[[package]]
+name = "pwasm-run"
+version = "0.1.0"
 
 [[package]]
 name = "quasi"

@@ -7,22 +7,23 @@ description: |
   Rust programming language. Parity is licensed under the GPLv3, and can be
   used for all your Ethereum needs.
 
-grade: devel
-confinement: strict
+confinement: devmode
 
 apps:
   parity:
     command: parity
-    plugs: [network, network-bind, mount-observe, x11, unity7]
 
 parts:
   parity:
     source: .
     plugin: rust
     build-attributes: [no-system-libraries]
-    build-packages: [g++, libudev-dev, libssl-dev, make, pkg-config]
-    stage-packages: [libc6, libssl1.0.0, libudev1, libstdc++6]
-  df:
-    plugin: nil
-    stage-packages: [coreutils]
-    stage: [bin/df]
+    build-packages:
+      - libudev-dev
+      - libssl-dev
+      - make
+      - pkg-config
+    stage-packages:
+      - libssl1.0.0
+      - libudev1
+      - libstdc++6
